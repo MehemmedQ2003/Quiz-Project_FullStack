@@ -1,0 +1,80 @@
+# General
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.DS_Store
+
+# Django
+*.sqlite3
+db.sqlite3
+db.sqlite3-journal
+/media/
+/staticfiles/
+/*.sqlite3
+/local_settings.py
+/secrets.json
+
+# Django - Virtual environment
+# virtualenv folder
+venv/
+env/
+*.env
+
+# Django migrations
+**/migrations/*.pyc
+**/migrations/*.py
+**/migrations/
+
+# Static and media files
+/static/
+/media/
+
+# Gunicorn
+gunicorn*pid
+
+# Ignore the local sqlite database
+*.sqlite3
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Node - React
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/build
+.DS_Store
+/public/node_modules
+/public/build
+
+# Parcel-bundler cache (if using Parcel)
+.cache/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+lerna-debug.log*
+
+# Coverage
+.coverage
+*.cover
+.hypothesis/
+.tox/
+
+# Pytest
+.pytest_cache/
