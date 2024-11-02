@@ -9,10 +9,14 @@ class SurahSerializer(serializers.ModelSerializer):
 
 class AyahSerializer(serializers.ModelSerializer):
     surah_name = serializers.SerializerMethodField()
+    surah_number = serializers.SerializerMethodField()
     
     class Meta:
         model = Ayah
-        fields = ['id', 'number', 'arabic_text', 'translation', 'surah_name']
+        fields = ['id', 'number', 'arabic_text', 'translation', 'surah_number' ,'surah_name']
         
     def get_surah_name(self, obj):
         return obj.surah.name
+    
+    def get_surah_number(self, obj):
+        return obj.surah.number

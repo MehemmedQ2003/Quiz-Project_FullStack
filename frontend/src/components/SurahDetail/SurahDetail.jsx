@@ -35,7 +35,7 @@ const SurahDetail = () => {
                                     {ayah.arabic_text}
                                 </Card.Title>
                                 <Card.Text className="text-center fs-5 mb-3 fw-bold text-secondary">
-                                    ({ayah.surah_name}, {ayah.number})
+                                    ({ayah.surah_number}/{ayah.surah_name}, {ayah.number})
                                 </Card.Text>
                                 <Card.Text className="text-center fs-5 text-muted">
                                     {ayah.translation}
