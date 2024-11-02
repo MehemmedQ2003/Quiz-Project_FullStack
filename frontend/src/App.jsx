@@ -3,8 +3,13 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Spinner } from "react-bootstrap";
 import NavBar from "./layout/Navbar/Navbar";
+import Home from "./Pages/Home/Home";
+import About from "./Pages/About/About";
+import EsmaulHusna from "./Pages/EsmaulHusna/EsmaulHusna";
+import Contact from "./Pages/Contact/Contact";
+import Login from "./Pages/Login/Login";
+import Register from "./Pages/Register/Register";
 import Footer from "./layout/footer/Footer";
-import Home from "./components/Home/Home";
 
 function App() {
     const { pathname } = useLocation();
@@ -40,6 +45,11 @@ function App() {
             {!isAuthPage && <NavBar />}
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/names" element={<EsmaulHusna />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
             </Routes>
             {!isAuthPage && <Footer />}
         </>

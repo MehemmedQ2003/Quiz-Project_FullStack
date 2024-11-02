@@ -1,0 +1,250 @@
+.animated-title {
+    background: linear-gradient(-90deg, #1E5C93, #1E5C93);
+    background-size: 400% 400%;
+    animation: gradientBackground 2s ease infinite;
+}
+
+
+.animated-title {
+    padding: 20px;
+    animation: titleAnimation 2s ease-in-out infinite alternate;
+    transition: all 0.3s ease;
+}
+
+.animated-title:hover {
+    transition: all 1s ease;
+}
+
+.homeImg:hover {
+    transform: scale(1.08);
+    transition: all 1s ease;
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes titleAnimation {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    100% {
+        box-shadow: 0 0 20px teal;
+        text-shadow: 2px 2px 4px teal;
+    }
+}
+
+.home {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animated-text {
+    animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.pulse-button {
+    animation: pulse 2s infinite;
+}
+
+.rainbow-bg {
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background-size: 400% 400%;
+    animation: rainbow 15s ease infinite;
+}
+
+.rainbow-border {
+    border: 3px solid transparent;
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background-size: 400% 400%;
+    animation: rainbow 15s ease infinite;
+}
+
+.image-container {
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+.hover-effect {
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover-effect:hover {
+    transform: scale(1.05);
+}
+
+.feature-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bouncing {
+    animation: bouncing 2s ease infinite;
+}
+
+.feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    background-color: #1E5C93;
+}
+
+.arabic-text {
+    font-family: 'Amiri', serif;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 #1E5C93;
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px #1E5C93;
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 #1E5C93;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -50%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 50%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes bouncing {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #1E5C93;
+    }
+
+    25% {
+        color: #1E5C93;
+    }
+
+    50% {
+        color: #1E5C93;
+    }
+
+    75% {
+        color: #1E5C93;
+    }
+
+    100% {
+        color: #1E5C93;
+    }
+}
+
+/* Əlavə responsiv stillər */
+@media (max-width: 768px) {
+    .feature-row {
+        margin-top: 2rem;
+    }
+}
