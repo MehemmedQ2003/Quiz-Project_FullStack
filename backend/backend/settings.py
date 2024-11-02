@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # third party apps
-    'ckeditor',
     'rest_framework',
     # 'corsheaders',
     # 'dj_rest_auth',
@@ -51,14 +50,6 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
       
 ]
-
-CKEDITOR_CONFIGS = {
-    'default': {
-        'toolbar': 'full',  # Toolbar-ı tam modda aktiv edir
-        'height': 300,
-        'width': '100%',
-    },
-}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
