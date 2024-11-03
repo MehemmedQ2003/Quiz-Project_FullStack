@@ -20,3 +20,9 @@ class AyahSerializer(serializers.ModelSerializer):
     
     def get_surah_number(self, obj):
         return obj.surah.number
+    
+
+class EsmaulHusnaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = EsmaulHusna
+        fields = ['id', 'name', 'description', 'dua']

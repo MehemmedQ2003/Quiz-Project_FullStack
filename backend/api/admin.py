@@ -11,3 +11,8 @@ class SurahAdmin(admin.ModelAdmin):
 class AyahAdmin(admin.ModelAdmin):
     list_filter = ('surah',)
     search_fields = ('surah__name', 'number')
+    
+@admin.register(EsmaulHusna)
+class EsmaulHusnaAdmin(admin.ModelAdmin):
+    list_display = ('name', 'description')
+    search_fields = ('name',)

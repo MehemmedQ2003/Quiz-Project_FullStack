@@ -19,3 +19,7 @@ class SurahViewSet(viewsets.ReadOnlyModelViewSet):
 class AyahViewSet(viewsets.ModelViewSet):
     queryset = Ayah.objects.all()
     serializer_class = AyahSerializer
+    
+class EsmaulHusnaViewSet(viewsets.ModelViewSet):
+    queryset = EsmaulHusna.objects.all()
+    serializer_class = EsmaulHusnaSerializer
