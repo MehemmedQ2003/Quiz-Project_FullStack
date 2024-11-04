@@ -23,3 +23,21 @@ class AyahViewSet(viewsets.ModelViewSet):
 class EsmaulHusnaViewSet(viewsets.ModelViewSet):
     queryset = EsmaulHusna.objects.all()
     serializer_class = EsmaulHusnaSerializer
+    
+    
+class QuestionCategoryViewSet(viewsets.ModelViewSet):
+    queryset = QuestionCategory.objects.all()
+    serializer_class = QuestionCategorySerializer
+
+    def retrieve(self, request, *args, **kwargs):
+        category = self.get_object()
+        questions = Question.objects.filter(category=category)
+        question_serializer = QuestionCategorySerializer(questions, many=True)
+        category_data = QuestionCategorySerializer(category).data
+        category_data['questions'] = question_serializer.data
+        return Response(category_data)
+    
+
+class QuestionViewSet(viewsets.ModelViewSet):
+    queryset = Question.objects.all()
+    serializer_class = QuestionSerializer
