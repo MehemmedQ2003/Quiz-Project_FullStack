@@ -53,6 +53,14 @@ class QuestionCategory(models.Model):
 
 
 class Question(models.Model):
+    
+    ANSWER_CHOICES = [
+        ('A', 'A'),
+        ('B', 'B'),
+        ('C', 'C'),
+        ('D', 'D'),
+    ]
+    
     category = models.ForeignKey(QuestionCategory, on_delete=models.CASCADE, related_name='questions')
     question_text = models.TextField(verbose_name="Sualın mətni", blank=True, null=True)
     question_img = models.ImageField(upload_to='questions/', blank=True, null=True, verbose_name="Sualın Şəkli")
@@ -69,12 +77,7 @@ class Question(models.Model):
     answer4_text = models.CharField(max_length=255, verbose_name="Cavab D", blank=True, null=True)
     answer4_img = models.ImageField(upload_to='answers/', blank=True, null=True, verbose_name="Cavab D'nin Şəkli")
 
-    correct_answer = models.PositiveSmallIntegerField(verbose_name="Düzgün Cavab", blank=True, null=True, choices=[
-        ('A', 'A'),
-        ('B', 'B'),
-        ('C', 'C'),
-        ('D', 'D'),
-    ])
+    correct_answer = models.CharField(max_length=1, choices=ANSWER_CHOICES)
 
     def __str__(self):
         return f"{self.question_text} ({self.category})"
@@ -84,14 +87,14 @@ class Question(models.Model):
         verbose_name_plural = "Suallar"
 
     def get_correct_answer_with_text(self):
-        if self.correct_answer is None:
-            return "Düzgün cavab təyin edilməyib"
+        if self.correct_answer not in [choice[0] for choice in self.ANSWER_CHOICES]:
+            return "Seçim mövcud deyil və ya düzgün cavab uyğun deyil"
         
         answer_mapping = {
-            1: (self.answer1_text, 'A'),
-            2: (self.answer2_text, 'B'),
-            3: (self.answer3_text, 'C'),
-            4: (self.answer4_text, 'D'),
+            'A': (self.answer1_text, 'A'),
+            'B': (self.answer2_text, 'B'),
+            'C': (self.answer3_text, 'C'),
+            'D': (self.answer4_text, 'D'),
         }
         
         correct_text, correct_letter = answer_mapping.get(self.correct_answer, ("", ""))
