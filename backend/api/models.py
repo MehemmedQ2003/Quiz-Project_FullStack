@@ -36,9 +36,6 @@ class EsmaulHusna(models.Model):
     class Meta:
         verbose_name = 'İsim ve Sıfat'
         verbose_name_plural = 'İsim ve Sıfatlar'
-        
-        
-from django.db import models
 
 class QuestionCategory(models.Model):
     name = models.CharField(max_length=255)
