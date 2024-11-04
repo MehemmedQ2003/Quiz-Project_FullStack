@@ -10,6 +10,7 @@ import Contact from "./Pages/Contact/Contact";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import Footer from "./layout/footer/Footer";
+import QuestionsCategory from "./Pages/QuestionsCategory/QuestionsCategory";
 
 function App() {
     const { pathname } = useLocation();
@@ -47,6 +48,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/names" element={<EsmaulHusna />} />
+              <Route path="/questionscategory" element={<QuestionsCategory />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />

@@ -32,7 +32,7 @@ class EsmaulHusnaSerializer(serializers.ModelSerializer):
 class QuestionCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = QuestionCategory
-        fields = ['id', 'name', 'count_questions']
+        fields = ['id', 'name', 'count_questions', 'image']
         
 
 class QuestionSerializer(serializers.ModelSerializer):

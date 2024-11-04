@@ -47,7 +47,7 @@ const NavBar = () => {
                 </div>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mx-auto">
-                        {['/', '/about', '/names', '/questions', '/contact'].map((path) => (
+                        {['/', '/about', '/names', '/questionscategory', '/contact'].map((path) => (
                             <Nav.Link 
                                 key={path}
                                 as={Link} 
@@ -56,7 +56,7 @@ const NavBar = () => {
                             >
                                 {path === '/' ? 'Ana səhifə' : 
                                  path === '/about' ? 'Haqqımızda' : 
-                                 path === '/questions' ? 'Testlər' : 
+                                 path === '/questionscategory' ? 'Testlər' : 
                                  path === '/contact' ? 'Əlaqə' : 'Əsmaul Hüsna'}
                             </Nav.Link>
                         ))}
