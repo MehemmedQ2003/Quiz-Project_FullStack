@@ -15,7 +15,7 @@ const navLinks = [
     { to: '/', text: 'Ana səhifə' },
     { to: '/about', text: 'Haqqımızda' },
     { to: '/names', text: 'Əsmaul Hüsna' },
-    { to: '/questions', text: 'Testlər' },
+    { to: '/questionscategory', text: 'Testlər' },
     { to: '/contact', text: 'Əlaqə' }
 ];
 

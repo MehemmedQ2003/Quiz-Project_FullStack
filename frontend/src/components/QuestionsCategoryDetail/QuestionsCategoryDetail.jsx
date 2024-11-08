@@ -36,7 +36,10 @@ const QuestionsCategoryDetail = () => {
                                 {category.count_questions}  sual
                                 </Badge>
                                 <Link
-                                to={category.count_questions}
+                                    to={{
+                                        pathname: "/questionscategory/questions",
+                                        state: { category: category.category }
+                                    }}
                                     className='btn mt-auto fw-bold text-white d-flex align-items-center justify-content-center gap-2'
                                     style={{ backgroundColor: '#1E5C93', transition: 'all 0.3s' }}
                                 >

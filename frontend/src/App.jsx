@@ -6,11 +6,12 @@ import NavBar from "./layout/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import EsmaulHusna from "./Pages/EsmaulHusna/EsmaulHusna";
+import QuestionsCategory from "./Pages/QuestionsCategory/QuestionsCategory";
+import Questions from "./Pages/Questions/Questions";
 import Contact from "./Pages/Contact/Contact";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import Footer from "./layout/footer/Footer";
-import QuestionsCategory from "./Pages/QuestionsCategory/QuestionsCategory";
 
 function App() {
     const { pathname } = useLocation();
@@ -49,6 +50,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/names" element={<EsmaulHusna />} />
               <Route path="/questionscategory" element={<QuestionsCategory />} />
+              <Route path="/questionscategory/questions" element={<Questions />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
